@@ -1,7 +1,7 @@
 {
   "name": "the-quote-card-express",
   "version": "1.0.0",
-  "description":"",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
