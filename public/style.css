@@ -1,13 +1,14 @@
 .background-img {
+    background-image: url('../public/img/ombrebackground.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url('../public/img/ombrebackground.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    z-index: -1; /* Ensure the background is behind other content */
 }
 
 body {
@@ -42,13 +43,13 @@ body {
     justify-content: center;
     height: 85vh;
     width: 90%;
-    border: 3px solid rgb(227, 86, 178);
+    border: 3px solid rgb(249, 244, 247);
 }
 
 .quote-text {
     font-size: 2.0rem;
     text-align: center;
-    color: rgb(18, 17, 18);
+    color: white;
     margin: 15px 0;
     font-style: bold;
 }
@@ -57,5 +58,5 @@ body {
     font-size: 1.2rem;
     text-align: center;
     margin-top: 10px;
-    color: black;
+    color: white;
 }
