@@ -1,5 +1,5 @@
 .background-img {
-    background-image: url('../public/img/ombrebackground.jpg');
+    background-image: url('./img/ombrebackground.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
