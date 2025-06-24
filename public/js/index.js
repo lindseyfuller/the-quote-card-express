@@ -5,15 +5,29 @@ const elements = {
     author: document.getElementById("author"),
 };
 
+// async function getRandomImage() {
+//     const client_id = "V7skbSnJJFvihp_bDQ4B_6tQBRKg6jsDIio6zNxMnjs";
+//     const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
+//     try {
+//         const response = await fetch(endpoint);
+//         const returnedData = await response.json()
+//         console.log(returnedData)
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
+
 async function getRandomImage() {
-    const client_id = "V7skbSnJJFvihp_bDQ4B_6tQBRKg6jsDIio6zNxMnjs";
-    const endpoint = `https://api.unsplash.com/photos/random/?client_id=${client_id}`;
+    const endpoint = "http://localhost:8080/api/v1/getRandomImage";
     try {
         const response = await fetch(endpoint);
-        const returnedData = await response.json()
-        console.log(returnedData)
+        const returnedData = await response.json();
+        const receivedPhotoUrl = returnedData.data;
+
+        const imgDiv = document.querySelector(".background-img");
+        imgDiv.style.backgroundImage = `url(${receivedPhotoUrl})`;
     } catch (error) {
-        console.error(error)
+        console.error(error);
     }
 }
 
